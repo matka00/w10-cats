@@ -7,23 +7,31 @@
 	<title>Form practice</title>
 
 	<script src="script.js" defer></script>
+	<script src="save-docs.js" defer></script>
 	<!-- defer megvárja, hogy az egész oldal betöltődjön és csak utána futtatja a js-t = document.addEventListener load-dal-->
+
+	<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-	<form id="form-google-search" action="https://www.google.com/search" method="get">
+	<form class="hidden" id="form-google-search" action="https://www.google.com/search" method="get">
 		<a href="https://www.google.com/search?q=javascript">Keresés</a>
 		<input name="q" type="text">
 		<button id="btn-google-search">Send</button>
 	</form>
 
-	<form action="" method="post">
+	<form class="hidden" action="" method="post">
 		<input name="username" type="text">
 		<input name="password" type="password">
 		<button>Send</button>
 	</form>
 
+	<div class="docs">
+		<label for="doc-text">A dokumentum szövege</label>
+		<textarea name="doc-text" id="doc-text" cols="30" rows="10"></textarea>
+		<p id="save-in-progress-text" class="hidden">Mentés...</p>
+	</div>
 </body>
 </html>
