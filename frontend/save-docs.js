@@ -14,7 +14,7 @@ async function save(){
         saveText.classList.add('hidden');
     }); */
 
-    await fetch('http://127.0.0.1:9000/', {
+    await fetch('http://127.0.0.1:3000/save', {
         method: 'POST',
         body: docText
     });
